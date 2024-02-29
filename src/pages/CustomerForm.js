@@ -22,7 +22,7 @@ function CustomerForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const apiUrl = "http://localhost:5000/api/customer"; // Updated endpoint
+        const apiUrl = process.env.REACT_APP_BACKEND_URL + "/api/customer"; 
 
         try {
             const response = await fetch(apiUrl, {

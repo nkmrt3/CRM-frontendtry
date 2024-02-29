@@ -20,8 +20,8 @@ function OppForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const apiUrl = "http://localhost:5000/api/opportunity"; // Updated endpoint
-
+        const apiUrl = process.env.REACT_APP_BACKEND_URL + "/api/opportunity"; 
+    
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',

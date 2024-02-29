@@ -18,8 +18,8 @@ function InteractionForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const apiUrl = "http://localhost:5000/api/interaction"; // Updated endpoint
-
+        const apiUrl = process.env.REACT_APP_BACKEND_URL + "/api/interaction"; // Using env variable
+    
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',

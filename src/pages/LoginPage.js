@@ -22,7 +22,8 @@ function LoginPage() {
     const { uname, pass } = event.target.elements;
 
     try {
-      const response = await fetch('http://localhost:5000/api/login', {
+      const apiUrl = process.env.REACT_APP_BACKEND_URL + '/api/login';
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

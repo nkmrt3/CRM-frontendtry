@@ -29,7 +29,8 @@ function EditUserPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:5000/api/check-username/${username}`);
+      const apiUrl = process.env.REACT_APP_BACKEND_URL + '/api/check-username/' + username; // Using env variable
+      const response = await fetch(apiUrl);
       const data = await response.json();
 
       console.log(data); // Log the response for debugging

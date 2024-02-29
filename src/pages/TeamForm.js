@@ -16,9 +16,10 @@ function TeamForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const apiUrl = process.env.REACT_APP_BACKEND_URL + "/api/opportunity"; 
 
     try {
-      const response = await fetch('http://localhost:5000/api/create-team', {
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
