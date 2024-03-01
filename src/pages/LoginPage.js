@@ -97,7 +97,8 @@ function LoginPage() {
           {renderErrorMessage("pass")}
         </div>
         <div className="button-container">
-          <input type="submit" />
+          <input type="submit" value="Login" />
+          <button onClick={() => navigate('/userform')}>Register</button>
         </div>
       </form>
     </div>
