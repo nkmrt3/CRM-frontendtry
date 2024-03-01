@@ -27,7 +27,7 @@ function UserForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const apiUrl = process.env.REACT_APP_BACKEND_URL + "/api/opportunity"; 
+    const apiUrl = process.env.REACT_APP_BACKEND_URL + "/api/add-user"; 
 
     try {
       const response = await fetch(apiUrl, {
